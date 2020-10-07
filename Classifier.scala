@@ -77,4 +77,25 @@ object Classifier {
     randForestModel
   }
 
+  def evaluateModel(classifier: ProbabilisticClassificationModel[Vector, _], test: Dataset[Row]): Unit = {
+    val cls_name = classifier.getClass.toString.split("\\.")(5)
+    println("Model " + cls_name)
+
+    classifier match {
+      case model: RandomForestClassificationModel =>
+        println("numTrees     " + model.getNumTrees)
+        println("maxDepth     " + model.getMaxDepth)
+        println("cacheNodeIds " + model.getCacheNodeIds)
+      case _ =>
+    }
+
+    val predictions = classifier.transform(test).select("prediction", "label")
+
+    predictions.show(200)
+    val accuracy = evaluator.setMetricName("accuracy").evaluate(predictions)
+    val f1Score = evaluator.setMetricName("f1").evaluate(predictions)
+    println("Accuracy (%) = " + accuracy * 100)
+    println("F1-score (%) = " + f1Score * 100)
+    println()
+  }
 }
