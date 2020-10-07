@@ -1,5 +1,9 @@
+import org.apache.spark.ml.classification._
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
+import org.apache.spark.ml.tuning.{CrossValidator, CrossValidatorModel, ParamGridBuilder}
+import org.apache.spark.ml.linalg.Vector
 import org.apache.spark.sql.{Dataset, Row}
+
 object Classifier {
   val evaluator: MulticlassClassificationEvaluator = new MulticlassClassificationEvaluator()
     .setLabelCol("label")
@@ -30,6 +34,27 @@ object Classifier {
     bestModel.write.overwrite().save(name)
     bestModel
   }
+
+  def trainRandomForest(train: Dataset[Row]): RandomForestClassificationModel = {
+    val name = "RandomForestClassificationModel"
+    val rf = new RandomForestClassifier()
+      .setCacheNodeIds(true)
+
+    val paramGrid = new ParamGridBuilder()
+      .addGrid(rf.numTrees, Array(10, 20))
+      .addGrid(rf.maxDepth, Array(10, 20))
+      .build()
+
+    // Run cross-validation, and choose the best set of parameters.
+    val bestModel = cv
+      .setEstimator(rf)
+      .setEstimatorParamMaps(paramGrid)
+      .fit(train)
+      .bestModel.asInstanceOf[RandomForestClassificationModel]
+    bestModel.write.overwrite().save(name)
+    bestModel
+  }
+
   def loadLogRegModel(): LogisticRegressionModel = {
     var logRegModel: LogisticRegressionModel = null
     val name = "LogisticRegressionModel"
@@ -40,4 +65,16 @@ object Classifier {
     }
     logRegModel
   }
+
+  def loadRandomForestModel(): RandomForestClassificationModel = {
+    var randForestModel: RandomForestClassificationModel = null
+    val name = "RandomForestClassificationModel"
+    try {
+      randForestModel = RandomForestClassificationModel.load(name)
+    } catch {
+      case e: Exception => throw new Exception(e + "\nMust pre-train models first, set PRODUCTION = false");
+    }
+    randForestModel
+  }
+
 }
