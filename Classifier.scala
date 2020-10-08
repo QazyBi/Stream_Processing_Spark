@@ -82,6 +82,10 @@ object Classifier {
     println("Model " + cls_name)
 
     classifier match {
+      case model: LogisticRegressionModel =>
+        println("maxIter         " + model.getMaxIter)
+        println("elasticNetParam " + model.getElasticNetParam)
+        println("regParam        " + model.getRegParam)
       case model: RandomForestClassificationModel =>
         println("numTrees     " + model.getNumTrees)
         println("maxDepth     " + model.getMaxDepth)
