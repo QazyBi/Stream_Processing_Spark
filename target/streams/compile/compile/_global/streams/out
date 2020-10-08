@@ -1,0 +1,4 @@
+[0m[[0m[33mwarn[0m] [0m[0m/home/alexandr/Downloads/IBD2/src/main/scala/Models.scala:16:19: Reference to uninitialized value evaluator[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0m    .setEvaluator(evaluator.setMetricName("f1"))[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m[0J

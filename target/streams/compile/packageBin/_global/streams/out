@@ -1,0 +1,25 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/alexandr/Downloads/IBD2/target/scala-2.12/spark-assignment_2.12-1.0.jar ...[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	Parameters.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexandr/Downloads/IBD2/target/scala-2.12/classes/Parameters.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	Reader$.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexandr/Downloads/IBD2/target/scala-2.12/classes/Reader$.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	Preprocess$.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexandr/Downloads/IBD2/target/scala-2.12/classes/Preprocess$.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	Models.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexandr/Downloads/IBD2/target/scala-2.12/classes/Models.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	Models$.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexandr/Downloads/IBD2/target/scala-2.12/classes/Models$.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	Main$$anon$1.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexandr/Downloads/IBD2/target/scala-2.12/classes/Main$$anon$1.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	Preprocess.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexandr/Downloads/IBD2/target/scala-2.12/classes/Preprocess.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	Parameters$.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexandr/Downloads/IBD2/target/scala-2.12/classes/Parameters$.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexandr/Downloads/IBD2/target/scala-2.12/classes/Main.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	Reader.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexandr/Downloads/IBD2/target/scala-2.12/classes/Reader.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexandr/Downloads/IBD2/target/scala-2.12/classes/Main$.class[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m[0J
